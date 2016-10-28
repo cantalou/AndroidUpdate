@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="UmengUpdateLoadingDialog" parent="android:Widget.Holo.ProgressBar"/>
+
+    <style name="UmengUpdateDownloadingDialog" parent="android:Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:maxHeight">40dip</item>
+        <item name="android:minHeight">40dip</item>
+    </style>
+</resources>
