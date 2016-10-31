@@ -32,16 +32,19 @@ public class AppUpdateConfig {
     /**
      * @param url                 更新接口地址
      * @param isShowLoadingDialog 是否显示加载框
-     * @param isForceCheck        是否强制检测, 忽略不再更新提示
+     * @param isForceCheck        是否强制检测, 忽略"不再提示更新"选项
      */
     public AppUpdateConfig(String url, boolean isShowLoadingDialog, boolean isForceCheck) {
         this(url, isShowLoadingDialog, isForceCheck, "", null);
     }
 
+
     /**
+     * @param url                 服务器接口地址
      * @param isShowLoadingDialog 是否显示加载框
-     * @param isForceCheck        是否强制检测
+     * @param isForceCheck        是否强制检测, 忽略"不再提示更新"选项
      * @param channel             渠道名称
+     * @param updateDataGetter    接口访问器 {@link com.cantalou.android.update.AppUpdateConfig.UpdateDataGetter}
      */
     public AppUpdateConfig(String url, boolean isShowLoadingDialog, boolean isForceCheck, String channel, UpdateDataGetter updateDataGetter) {
         this.url = url;
@@ -71,6 +74,9 @@ public class AppUpdateConfig {
         return updateDataGetter;
     }
 
+    /**
+     * 自定义的接口访问器以实现自定义的 接口鉴权, HTTPS等访问要求
+     */
     public static interface UpdateDataGetter {
         public JSONObject get();
     }

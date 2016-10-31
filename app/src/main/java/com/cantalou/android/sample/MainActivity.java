@@ -20,4 +20,5 @@ public class MainActivity extends Activity {
         AppUpdateConfig conf = new AppUpdateConfig("http://192.168.57.252:8080/updateJson.txt", true, true);
         manager.update(this, conf);
     }
+
 }

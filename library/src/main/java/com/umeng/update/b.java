@@ -34,7 +34,7 @@ public class b extends g {
             return null;
         }
         d var1 = new d(this.a);
-        var1.setBaseUrl(config.getUrl());
+        var1.setBaseUrl(url != null ? url :config.getUrl());
 
         UpdateResponse var2;
         AppUpdateConfig.UpdateDataGetter getter = config.getUpdateDataGetter();

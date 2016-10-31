@@ -30,6 +30,9 @@ public class UmengUpdateAgent {
     private static c e = new c();
     private static Handler f;
     private static boolean g = false;
+    static{
+        setChannel("");
+    }
 
     public UmengUpdateAgent() {
     }

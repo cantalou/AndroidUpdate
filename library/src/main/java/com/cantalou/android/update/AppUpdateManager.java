@@ -50,6 +50,15 @@ public class AppUpdateManager implements UmengUpdateListener {
         return InstanceHolder.INSTANCE;
     }
 
+    /**
+     * 设置服务器接口地址
+     *
+     * @param url
+     */
+    public static void setUpdateUrl(String url) {
+        com.umeng.update.b.url = url;
+    }
+
     public void update(Activity activity, AppUpdateConfig config) {
 
         if (activity == null) {
